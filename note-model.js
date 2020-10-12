@@ -1,5 +1,10 @@
 class Note {
-  constructor(body) {
-    this.body = body;
+  constructor(text) {
+    this.text = text;
   }
+
+  displayText()  {
+    return this.text
+  }
+
 }

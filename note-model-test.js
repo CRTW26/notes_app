@@ -1,22 +1,18 @@
-// create a note object with text
-// pass in the text as parameter 
+assert = new Assert;
 
-(function(exports) {
-  function noteHasText() {
-  var note = new Note('This is a note');
-  assert.isTrue(note.body === 'This is a note');
-};
 
-var assert = {
-  isTrue: function(assertionToCheck) {
-    if (!assertionToCheck) {
-      throw new Error("Test failed:" + assertionToCheck);
-    } else {
-      console.log("Test passed!")
-    }
-  }
-};
+
+function noteHasText() {
+var note = new Note('This is a note');
+assert.isTrue(note.text === 'This is a note');
+}
 
 noteHasText();
-})(this);
+
+function noteDisplayedOnPage() {
+var note = new Note('This is a note');
+assert.isTrue(note.displayText() === 'This is a note');
+}
+
+noteDisplayedOnPage();
 
