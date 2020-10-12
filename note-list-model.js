@@ -1,15 +1,15 @@
 class NoteList {
 
   constructor(){
-    this.note_list = []
+    this.allNotes = []
   }
 
   addNote(note) {
-    this.note_list.push(note)
+    this.allNotes.push(note)
   }
 
   displayNotes() {
-   return this.note_list 
+   return this.allNotes
   }
 
 }
