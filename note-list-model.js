@@ -9,7 +9,7 @@ class NoteList {
   }
 
   displayNotes() {
-   return this.allNotes
+    return this.allNotes;
   }
 
-}
+} 
