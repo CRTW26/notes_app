@@ -1,13 +1,14 @@
-class NoteView {
+class noteView {
 
-  constructor (allNotes){
-    this.allNotes = allNotes
+  constructor (notelist){
+    this.notelist = notelist;
   }
 
   noteListFormatter() {
-    var arr = [];
-    for(let note = 0; note < this.allNotes.length; note++){
-    arr.push("<li><div>" + this.allNotes[note] + "</div></li>")
+    let arr = [];
+    console.log(this.notelist.allNotes.length);
+    for(let note = 0; note < this.notelist.allNotes.length; note++){
+    arr.push("<li><div>" + this.notelist.allNotes[note] + "</div></li>")
     }
     return ("<ul>" + arr.join("") + "</ul>")
   }

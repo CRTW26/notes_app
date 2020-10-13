@@ -2,21 +2,12 @@
 // element.innerHTML = 'howdy';
 // console.log(element)
 
-class Controller {
+class noteController {
   
-  constructor(noteList, note) {
-    this.noteList = noteList
-    this.note = note
-  }
+  constructor(noteList) {
+    this.notelist = noteList
 
-  // console logs ul elements but not the note itself
-  addNote() {
-    this.noteList.addNote(this.note);
-  }
-
-  formatNote(noteList) {
-    let noteview = new NoteView(noteList)
-    return noteview.noteListFormatter();
+    this.noteview(notelist).noteListFormatter;
   }
 
   getHtml() {
@@ -26,5 +17,4 @@ class Controller {
   }
 
 }
-
 

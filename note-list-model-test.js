@@ -2,26 +2,23 @@ assert = new Assert;
 
 // New NoteList object Stores an array of Note models.
 
-
 function addNoteTest() {
-  var note_list = new NoteList()
-  var note1 = new Note("hello")
-  note_list.addNote(note1)
-  assert.isTrue(note_list.allNotes.includes(note1))
+  let notelist = new noteList();
+  notelist.addNote('hello');
+  assert.isTrue(notelist.allNotes[0] === 'hello');
 }
 
-addNoteTest()
+addNoteTest();
 
-function displaysAllNotes() {
-  var note_list = new NoteList()
-  var note1 = new Note("hello")
-  var note2 = new Note("world")
-  note_list.addNote(note1)
-  note_list.addNote(note2)
-  const test = note_list.displayNotes()
-  assert.isTrue(test.includes(note1 && note2))
-  //assert.isTrue(note_list.allNotes.includes(note1 && note2)) 
-  
+function displayAllNotes() {
+  let notelist = new noteList();
+  notelist.addNote('hello');
+  notelist.addNote('world');
+  let expected = ['hello', 'world']; 
+  console.log(notelist.displayNotes());
+  console.log(expected);
+  assert.isTrue(notelist.displayNotes() == 'hello');
+  // doesn't work with array? ['hello', 'world']
 }
 
-displaysAllNotes()
+displayAllNotes();
